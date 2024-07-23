@@ -3,8 +3,8 @@ import "./globals.css";
 // const inter = Inter({ subsets: ["Tahoma"] });
 
 export const metadata = {
-  title: "Faisal",
-  description: "",
+  title: "Zen Transformations",
+  description: "Property Investments & Developments",
 };
 
 export default function RootLayout({ children }) {

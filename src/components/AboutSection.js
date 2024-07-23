@@ -1,10 +1,10 @@
 import TextAndImageSection from "./common/TextAndImageSection";
 import theme from "@/styles/theme";
 
-const AboutEliza = () => {
+const AboutSection = () => {
   return (
     <TextAndImageSection
-      markdownFilePath="AboutEliza.md"
+      markdownFilePath="AboutSection.md"
       imgSrc="/homepage/about-eliza.jpeg"
       imgAlt="Eliza Veretilo"
       imagePosition="right"
@@ -13,4 +13,4 @@ const AboutEliza = () => {
   );
 };
 
-export default AboutEliza;
+export default AboutSection;
