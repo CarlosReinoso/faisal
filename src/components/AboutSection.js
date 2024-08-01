@@ -5,9 +5,9 @@ const AboutSection = () => {
   return (
     <TextAndImageSection
       markdownFilePath="AboutSection.md"
-      imgSrc="/homepage/about-eliza.jpeg"
-      imgAlt="Eliza Veretilo"
-      imagePosition="right"
+      imgSrc="/homepage/about.jpg"
+      imgAlt="about"
+      imagePosition="left"
       bgColor={theme.colors.bgSecondary}
     />
   );
