@@ -9,6 +9,7 @@ const AboutSection = () => {
       imgAlt="about"
       imagePosition="left"
       bgColor={theme.colors.bgSecondary}
+      className="mt-20"
     />
   );
 };
