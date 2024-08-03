@@ -9,7 +9,7 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata = {
   title: "Zen Transformations",
-  description: { HERO_SUBHEADING },
+  description: HERO_SUBHEADING,
 };
 
 export default function RootLayout({ children }) {
