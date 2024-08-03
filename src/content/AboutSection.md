@@ -2,7 +2,9 @@
 
 At Zen Transformations our mission is simple;
 
-To transform lives through unlocking the power of property.  We do this by creating and delivering inspiring residential and mixed-use property developments across South East England.
+To transform lives through unlocking the power of property. 
+
+We do this by creating and delivering inspiring residential and mixed-use property developments across South East England.
 
 We have a clear vision of becoming a leading property developer and a joint venture partner of choice for investors.
 

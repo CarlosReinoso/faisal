@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ProjectCard = ({ imageUrl, location, area, category }) => {
+const ProjectCard = ({ imageUrl, location, conversion, category }) => {
   return (
     <div className="relative w-full h-96 m-4 group">
       <div className="absolute inset-0 border-2 border-white p-1">
@@ -24,6 +24,7 @@ const ProjectCard = ({ imageUrl, location, area, category }) => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h2 className="text-white text-lg font-semibold">{location}</h2>
+            <h2 className="text-white text-lg font-semibold">{conversion}</h2>
           </div>
         </div>
       </div>
