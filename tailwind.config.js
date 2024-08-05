@@ -18,9 +18,6 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        tahoma: ["Tahoma", "sans-serif"],
-      },
       boxShadow: {
         "text-shadow": "1px 1px 2px rgb(0, 0, 0)",
         "img-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px",

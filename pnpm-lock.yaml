@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@next/font': ^14.2.5
   gray-matter: ^4.0.3
   next: 14.2.5
   postcss: ^8.4.39
@@ -14,7 +13,6 @@ specifiers:
   tailwindcss: ^3.4.4
 
 dependencies:
-  '@next/font': 14.2.5_next@14.2.5
   gray-matter: 4.0.3
   next: 14.2.5_nnrd3gsncyragczmpvfhocinkq
   raw-loader: 4.0.2
@@ -86,14 +84,6 @@ packages:
 
   /@next/env/14.2.5:
     resolution: {integrity: sha512-/zZGkrTOsraVfYjGP8uM0p6r0BDT6xWpkjdVbcz66PJVSpwXX3yNiRycxAuDfBKGWBrZBXRuK/YVlkNgxHGwmA==}
-    dev: false
-
-  /@next/font/14.2.5_next@14.2.5:
-    resolution: {integrity: sha512-e2f3M+tAuJPUyXwWtEPKlPfpPEKODiQvPjdxOWBZC+zgdGv18KfjTkEmopfkfpZ016yCvw5BmMPeuEU/uiDf9g==}
-    peerDependencies:
-      next: '*'
-    dependencies:
-      next: 14.2.5_nnrd3gsncyragczmpvfhocinkq
     dev: false
 
   /@next/swc-darwin-arm64/14.2.5:

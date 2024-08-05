@@ -1,6 +1,6 @@
-import { HERO_SUBHEADING } from "@/lib/constants";
 import "./globals.css";
-import { Libre_Baskerville } from "@next/font/google";
+import { Libre_Baskerville } from "next/font/google";
+import { HERO_SUBHEADING } from "@/lib/constants";
 
 const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
