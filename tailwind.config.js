@@ -7,8 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        beige: "#f3f4e7",
+      colors: {
+        secondary: "var(--secondaryColour)",
+        third: "var(--thirdColour)",
       },
       textColor: {
         black: "#000000",
@@ -21,6 +22,13 @@ module.exports = {
       boxShadow: {
         "text-shadow": "1px 1px 2px rgb(0, 0, 0)",
         "img-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px",
+      },
+    },
+    variants: {
+      extend: {
+        borderColor: ["focus"],
+        outline: ["focus"],
+        ringColor: ["focus"],
       },
     },
   },
