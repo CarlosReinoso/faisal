@@ -15,11 +15,14 @@ export default function TextAndImageSection({
   const isImageLeft = imagePosition === "left";
 
   return (
-    <div className={`flex flex-col md:flex-row items-center p-4 ${bgColor} my-10`}>
+    <div
+      className={`flex flex-col md:flex-row items-center p-4 ${bgColor} my-10`}
+    >
       <div
         className={`md:w-1/2 p-4 ${
           isImageLeft ? "md:order-last" : "md:order-first"
-        } ${fontColor}`}
+        } `}
+        style={{ color: "white" }}
       >
         <MarkdownContent markdownFilePath={markdownFilePath} />
         {buttonText && buttonUrl && (
