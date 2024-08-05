@@ -1,8 +1,6 @@
 ### About Us
 
-At Zen Transformations our mission is simple;
-
-To transform lives through unlocking the power of property. 
+At Zen Transformations our mission is simple; to transform lives through unlocking the power of property. 
 
 We do this by creating and delivering inspiring residential and mixed-use property developments across South East England.
 

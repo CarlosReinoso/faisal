@@ -2,9 +2,31 @@
 import MarkdownContent from "./common/MarkdownContent";
 import { useState } from "react";
 
+const FormInput = ({ labelName, name, value, onChange, error, ...props }) => {
+  return (
+    <div className="mb-4">
+      <label className="block mb-2" htmlFor={name}>
+        {labelName}
+      </label>
+      <input
+        type="text"
+        name={name}
+        id={name}
+        value={value}
+        onChange={onChange}
+        className={`text-black w-full p-2 rounded focus:outline-none focus:ring-1 ${
+          error ? "border-red-500" : "focus:border-third focus:ring-third"
+        }`}
+        {...props}
+      />
+      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+    </div>
+  );
+};
+
 export default function ContactUsSection() {
   const [formData, setFormData] = useState({
-    firstName: "",
+    fullName: "",
     email: "",
     phone: "",
     enquiry: "",
@@ -14,7 +36,7 @@ export default function ContactUsSection() {
 
   const validate = () => {
     let tempErrors = {};
-    if (!formData.firstName) tempErrors.firstName = "First Name is required.";
+    if (!formData.fullName) tempErrors.fullName = "Full Name is required.";
     if (!formData.email) {
       tempErrors.email = "Email Address is required.";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -43,7 +65,7 @@ export default function ContactUsSection() {
 
         if (res.ok) {
           alert("Message sent successfully");
-          setFormData({ firstName: "", email: "", phone: "", enquiry: "" });
+          setFormData({ fullName: "", email: "", phone: "", enquiry: "" });
         } else {
           alert("Failed to send message");
         }
@@ -62,57 +84,30 @@ export default function ContactUsSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto p-6 bg-gray-800 text-white rounded-lg shadow-md"
+          className="max-w-lg mx-auto p-6 bg-secondary text-white rounded-lg shadow-md"
         >
-          <div className="mb-4">
-            <label className="block mb-2" htmlFor="firstName">
-              First Name *
-            </label>
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              className={`w-full p-2 border border-gray-700 rounded ${
-                errors.firstName ? "border-red-500" : ""
-              }`}
-            />
-            {errors.firstName && (
-              <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
-            )}
-          </div>
-          <div className="mb-4">
-            <label className="block mb-2" htmlFor="email">
-              Email Address *
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`w-full p-2 border border-gray-700 rounded ${
-                errors.email ? "border-red-500" : ""
-              }`}
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
-          </div>
-          <div className="mb-4">
-            <label className="block mb-2" htmlFor="phone">
-              Phone Number
-            </label>
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-700 rounded"
-            />
-          </div>
+          <FormInput
+            labelName="Full Name *"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            error={errors.fullName}
+          />
+          <FormInput
+            labelName="Email Address *"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            error={errors.email}
+          />
+          <FormInput
+            labelName="Phone Number"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            error={errors.phone}
+          />
+
           <div className="mb-4">
             <label className="block mb-2" htmlFor="enquiry">
               Enquiry
@@ -122,8 +117,10 @@ export default function ContactUsSection() {
               id="enquiry"
               value={formData.enquiry}
               onChange={handleChange}
-              className={`w-full p-2 border border-gray-700 rounded ${
-                errors.enquiry ? "border-red-500" : ""
+              className={`text-black w-full p-2 rounded focus:outline-none focus:ring-1 ${
+                errors.enquiry
+                  ? "border-red-500"
+                  : "focus:border-third focus:ring-third"
               }`}
               rows="4"
             ></textarea>
@@ -134,15 +131,11 @@ export default function ContactUsSection() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-yellow-500 text-black py-2 px-4 rounded hover:bg-yellow-600 transition duration-300"
+              className="text-white bg-yellow-500 text-black py-2 px-4 rounded hover:bg-yellow-600 transition duration-300"
             >
               Submit
             </button>
           </div>
-          <p className="mt-4 text-center text-sm">
-            By clicking "Submit" you are agreeing to our GDPR, Privacy Policy &
-            Terms of Service.
-          </p>
         </form>
       </div>
     </div>

@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   gray-matter: ^4.0.3
   next: 14.2.5
+  nodemailer: ^6.9.14
   postcss: ^8.4.39
   raw-loader: ^4.0.2
   react: ^18
@@ -15,6 +16,7 @@ specifiers:
 dependencies:
   gray-matter: 4.0.3
   next: 14.2.5_nnrd3gsncyragczmpvfhocinkq
+  nodemailer: 6.9.14
   raw-loader: 4.0.2
   react: 18.3.1
   react-dom: 18.3.1_react@18.3.1
@@ -1130,6 +1132,11 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nodemailer/6.9.14:
+    resolution: {integrity: sha512-Dobp/ebDKBvz91sbtRKhcznLThrKxKt97GI2FAlAyy+fk19j73Uz3sBXolVtmcXjaorivqsbbbjDY+Jkt4/bQA==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /normalize-path/3.0.0:
