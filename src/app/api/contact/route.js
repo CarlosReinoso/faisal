@@ -16,7 +16,7 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: "Zen Transformation: New Contact Form Submission",
+      subject: "Zen Transformations: New Contact Form Submission",
       text: `
         Name: ${body.fullName}
         Phone: ${body.phone}
