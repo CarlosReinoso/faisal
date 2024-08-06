@@ -7,7 +7,6 @@ export default function TextAndImageSection({
   imgSrc,
   imgAlt,
   bgColor,
-  fontColor,
   imagePosition = "right",
   buttonText,
   buttonUrl,
