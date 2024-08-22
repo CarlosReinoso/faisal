@@ -8,7 +8,6 @@ const AboutSection = () => {
       imgAlt="about"
       imagePosition="left"
       className="mt-20"
-      fontColor="white"
     />
   );
 };
