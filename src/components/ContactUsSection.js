@@ -1,6 +1,7 @@
 "use client";
 import MarkdownContent from "./common/MarkdownContent";
 import { useState } from "react";
+import { CONTACT_EMAIL } from "../lib/constants";
 
 const FormInput = ({ labelName, name, value, onChange, error, ...props }) => {
   return (
@@ -53,26 +54,27 @@ export default function ContactUsSection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      try {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
+      // Create email body with form data
+      const emailBody = `Name: ${formData.fullName}
+Email: ${formData.email}
+${formData.phone ? `Phone: ${formData.phone}` : ""}
 
-        if (res.ok) {
-          alert("Message sent successfully");
-          setFormData({ fullName: "", email: "", phone: "", enquiry: "" });
-        } else {
-          alert("Failed to send message");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("Error sending message");
-      }
+Enquiry:
+${formData.enquiry}`;
+
+      // Create mailto link
+      const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=Zen Transformations: Contact Form Submission from ${encodeURIComponent(
+        formData.fullName
+      )}&body=${encodeURIComponent(emailBody)}`;
+
+      // Open default email client
+      window.location.href = mailtoLink;
+
+      // Clear form after opening email client
+      setFormData({ fullName: "", email: "", phone: "", enquiry: "" });
     }
   };
 
