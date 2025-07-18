@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 *.ps1
-.env
+config.bat
